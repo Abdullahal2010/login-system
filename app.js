@@ -19,7 +19,7 @@ require("./config/db");
 // session management
 const passport = require("passport");
 const session = require("express-session");
-const MongoStore = require("connect-mongo").default;
+const MongoStore = require("connect-mongo");
 app.set("trust proxy", 1); // trust first proxy
 app.use(
   session({
