@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- include("../partials/header.ejs") %>
+    <main><%- body %></main>
+    <%- include("../partials/footer.ejs") %>
+    <!-- for login and register button -->
+    <span style="display: none" id="navbarInfo"><%= navbarInfo %></span>
+
+    <!-- javascript site -->
+
+    <script>
+      const navbarInfo = document.querySelector("#navbarInfo").innerHTML;
+      const logRegDiv = document.querySelector("#logRegDiv");
+      const profileAndLogoutDiv = document.querySelector(
+        "#profileAndLogoutDiv"
+      );
+      const outPut = document.querySelector("#outPut");
+
+      if (navbarInfo) {
+        logRegDiv.style.display = "none";
+        profileAndLogoutDiv.style.display = "inline-block";
+      } else {
+        logRegDiv.style.display = "inline-block";
+        profileAndLogoutDiv.style.display = "none";
+      }
+
+      if (outPut) {
+        setTimeout(() => {
+          outPut.style.display = "none";
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>

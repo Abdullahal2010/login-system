@@ -1,0 +1,28 @@
+<h1>Welcome to the login page</h1>
+<h3 id="outPut"><%= output %></h3>
+<form action="/login" method="post">
+  <div>
+    <label for="username">User name : </label><br />
+    <input
+      type="text"
+      name="username"
+      id="username"
+      placeholder="Enter your user name"
+      required
+    />
+  </div>
+  <br />
+  <div>
+    <label for="password">Password : </label><br />
+    <input
+      type="password"
+      name="password"
+      id="password"
+      placeholder="Enter your password"
+      required
+    />
+  </div>
+  <br />
+
+  <button type="submit">Login</button>
+</form>
